@@ -20,3 +20,15 @@ Show_image("Image after drawing", img)
 h, w, _ = img.shape
 # The similar procedure to draw a circle
 Show_image("Circle", cv2.circle(img, (w // 2, h // 2), 100, (0, 255, 0), 2))
+
+# Putting text on images
+# We shall use the putText method with the following parameters in the saem order
+#   1. Image
+#   2. The text
+#   3. The bottom-left coordinates, from where the text should start
+#   4. The Font from cv2
+#   5. Font Size
+#   6. Color of the text (in BGR format)
+#   7. Line width
+cv2.putText(img, "Hello World!", (300, 100), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 2)
+Show_image("Image after adding text", img)
