@@ -9,19 +9,19 @@ img = Get_Image()
 roi = img[100 : 500, 200 : 700]
 
 # Show the image
-#Show_image("ROI", roi)
+Show_image("ROI", roi)
 
 # Resizing the image
 # The resize() function takes two parameters: the image and the new dimenstions
 resized_img = cv2.resize(img, (800, 800))
 
 # Show the image
-#Show_image("Resized Image", resized_img)
+Show_image("Resized Image", resized_img)
 
 # We see the image was disoriented, now we shall fix it by using the ratio
 h, w, _ = img.shape
 resized_img_ratio = cv2.resize(img, (800, int(h * (800 / w))))
-#Show_image("Resized with ratio", resized_img_ratio)
+Show_image("Resized with ratio", resized_img_ratio)
 
 # Above, we calculated the ratio of the width (800 / w) to the resized height (800) and multiplied it
 
