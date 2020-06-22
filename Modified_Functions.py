@@ -1,8 +1,12 @@
 import cv2
-import numpy as np
 
 def Get_Image():
     return cv2.imread("road.jpg")
+
+def Get_Resized_Image():
+    image = Get_Image()
+    h, w, _ = image.shape
+    return cv2.resize(image, (800, int(h * (800 / w))))
 
 def Read_Image(path):
     return cv2.imread(path)
