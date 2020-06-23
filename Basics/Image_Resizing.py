@@ -1,4 +1,5 @@
-import cv2
+import os, sys, cv2
+sys.path.append(os.getcwd()[:os.getcwd().find(os.path.basename(os.getcwd())) - 1])
 from Modified_Functions import Get_Image, Show_image, Get_Resized_Image
 
 img = Get_Image()
