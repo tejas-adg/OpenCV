@@ -1,9 +1,10 @@
 import os, sys, cv2
 sys.path.append(os.getcwd()[:os.getcwd().find(os.path.basename(os.getcwd())) - 1])
 import numpy as np
+from Modified_Functions import Get_Image
 
 # Reading the image using imread() function
-img = cv2.imread("road.jpg")
+img = Get_Image()
 
 # Printing the shape of the image
 print(f"The shape of the image is given as (<height>, <width>, <depth>)\n{img.shape}\n")

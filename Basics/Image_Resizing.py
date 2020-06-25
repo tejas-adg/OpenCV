@@ -9,6 +9,9 @@ img = Get_Image()
 half_img = cv2.resize(img, (0, 0), fx = 0.5, fy = 0.5)
 Show_image("Half", half_img)
 
+# Trying to enlarge the image
+# We are using an interpolation mode to aid us in the process
+# This is so cool
 img = Get_Resized_Image()
 interopolated_img = cv2.resize(img, (900, 900), interpolation = cv2.INTER_NEAREST)
 Show_image("Interpolation", interopolated_img)
